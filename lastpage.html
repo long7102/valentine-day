@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anh yêu em</title>
+    <link rel="stylesheet" href="css/flower.css" />
+    <style>
+      #audio-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: none;
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        transition: background 0.3s;
+      }
+      #audio-toggle:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="thankyou">
+      <b>Nói thế thôi chứ từ tận đáy lòng, anh xin cảm ơn em vì đã chọn anh, giữa hàng nghìn người ngoài kia. Yêu em lắm ó moah moah</b>
+    </div>
+
+    <div class="flower">
+      <div class="f-wrapper">
+        <div class="flower__line"></div>
+        <div class="f">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__leaf flower__leaf--5"></div>
+          <div class="flower__leaf flower__leaf--6"></div>
+          <div class="flower__leaf flower__leaf--7"></div>
+          <div class="flower__leaf flower__leaf--8 flower__fall-down--yellow"></div>
+        </div>
+      </div>
+
+      <div class="f-wrapper f-wrapper--2">
+        <div class="flower__line"></div>
+        <div class="f">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__leaf flower__leaf--5"></div>
+          <div class="flower__leaf flower__leaf--6"></div>
+          <div class="flower__leaf flower__leaf--7"></div>
+          <div class="flower__leaf flower__leaf--8 flower__fall-down--pink"></div>
+        </div>
+      </div>
+
+      <div class="f-wrapper f-wrapper--3">
+        <div class="flower__line"></div>
+        <div class="f">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__leaf flower__leaf--5"></div>
+          <div class="flower__leaf flower__leaf--6"></div>
+          <div class="flower__leaf flower__leaf--7"></div>
+          <div class="flower__leaf flower__leaf--8 flower__fall-down--purple"></div>
+        </div>
+      </div>
+
+      <div class="flower__glass"></div>
+
+      <audio id="background-audio" loop>
+        <source src="Cuz Only U.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <button class="button" onclick="window.open('https://www.instagram.com/absolutely.vlong/', '_blank')">
+      Em còn chờ cái gì nữa
+    </button>
+    
+
+    <button id="audio-toggle">🔊</button>
+
+    <script>
+      const audio = document.getElementById("background-audio");
+      const audioToggle = document.getElementById("audio-toggle");
+
+      let isPlaying = false;
+
+      audioToggle.addEventListener("click", () => {
+        if (isPlaying) {
+          audio.pause();
+          audioToggle.innerHTML = "🔇";
+        } else {
+          audio.play();
+          audioToggle.innerHTML = "🔊";
+        }
+        isPlaying = !isPlaying;
+      });
+    </script>
+  </body>
+</html>

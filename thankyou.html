@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ôi tuyệt vời quá</title>
+    <link rel="stylesheet" href="css/lastpage.css" />
+    <style>
+      #audio-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: none;
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        transition: background 0.3s;
+      }
+      #audio-toggle:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="thankyou"><b>Em lại tự đắc rồi, ai lại không muốn làm valentine của tôi chứ 😏</b></div>
+    <img id="rizz" src="giphy (1).gif" alt="rizzler god" class="responsive" />
+    <br />
+
+    <audio id="background-audio" loop>
+      <source src="congratulations.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <button id="audio-toggle">🔊</button>
+
+    <h1>Đừng rời đi vội!</h1>
+    <button class="button" onclick="location.href='lastpage.html'">Click me UWU</button>
+
+    <script>
+      const audio = document.getElementById("background-audio");
+      const audioToggle = document.getElementById("audio-toggle");
+
+      let isPlaying = false;
+
+      audioToggle.addEventListener("click", () => {
+        if (isPlaying) {
+          audio.pause();
+          audioToggle.innerHTML = "🔇";
+        } else {
+          audio.play();
+          audioToggle.innerHTML = "🔊";
+        }
+        isPlaying = !isPlaying;
+      });
+    </script>
+  </body>
+</html>
