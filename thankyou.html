@@ -10,7 +10,7 @@
         position: fixed;
         bottom: 20px;
         right: 20px;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.2);
         color: white;
         border: none;
         font-size: 24px;
@@ -50,6 +50,13 @@
     <h1>Đừng rời đi vội!</h1>
     <button class="button" onclick="location.href='lastpage.html'">Nhấn vào đây đi 🥺👉👈</button>
 
+    <div id="popup-modal" class="modal">
+      <div class="modal-content">
+        <h2>🎉 Chúc mừng em đã quay vào ô phải yêu anh trọn đời 🎉</h2>
+        <p>Anh yêu em nhiều lắm đó💖. Btw, click vào hình cái loa để tận hưởng trọn vẹn nhé. Chúc em 1 ngày valentine vui vẻ bên người mình yêu</p>
+        <button class="close-btn" onclick="closeModal()">Đóng</button>
+      </div>
+    </div>
     <script>
       const audio = document.getElementById("background-audio");
       const audioToggle = document.getElementById("audio-toggle");
@@ -66,6 +73,25 @@
         }
         isPlaying = !isPlaying;
       });
+
+      document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("popup-modal");
+
+  // Hiển thị modal sau khi tải trang
+  modal.style.display = "flex";
+
+  // Đóng modal khi click ra ngoài modal-content
+  modal.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+});
+
+function closeModal() {
+  document.getElementById("popup-modal").style.display = "none";
+}
+
     </script>
   </body>
 </html>

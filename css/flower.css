@@ -43,6 +43,7 @@ body{
     #thankyou {
       font-size: 30px;
       margin-bottom: 210px;
+      padding: 0 20px;
     }
     .flower__glass{
         height: 35vmin;
@@ -50,10 +51,11 @@ body{
     .button {
         margin-top: 50px;
         width: 100%;
-        z-index: 11111;
+        z-index: 1000;
     }
     .button-wrapper{
         display: block !important;
+        z-index: 9889;
     }
   }
   

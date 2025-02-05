@@ -24,12 +24,14 @@
       justify-content: center;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
       transition: background 0.3s;
+      z-index: 1000;
     }
 
     @media (max-width: 575.98px) {
       #audio-toggle {
         top: 10px;
         bottom: none;
+        right: 10px;
       }
     }
 
@@ -41,7 +43,7 @@
 
 <body>
   <div id="thankyou">
-    <b>Nói thế thôi chứ từ tận đáy lòng, cảm ơn em vì đã chọn anh, giữa hàng nghìn người ngoài kia. Yêu em lắm ó moah moah</b>
+    <b>Nói thế thôi chứ từ tận đáy lòng, cảm ơn em vì đã chọn anh, đã yêu anh giữa hàng nghìn người ngoài kia. Yêu em lắm ó</b>
   </div>
 
   <div class="flower">
@@ -107,7 +109,22 @@
     </button>
 
   </div>
+  <button id="audio-toggle">🔊</button>
 
+  <script>
+    const audio = document.getElementById("background-audio");
+    const toggleButton = document.getElementById("audio-toggle");
+  
+    toggleButton.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+        toggleButton.textContent = "🔇";
+      } else {
+        audio.pause();
+        toggleButton.textContent = "🔊";
+      }
+    });
+  </script>
 </body>
 
 </html>
