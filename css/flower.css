@@ -42,7 +42,7 @@ body{
 @media (max-width: 575.98px) {
     #thankyou {
       font-size: 30px;
-      margin-top: 80px;
+      margin-top: 50px;
       margin-bottom: 250px;
     }
     .flower__glass{
@@ -58,8 +58,8 @@ body{
   }
   
 .flower__glass{
-    width:15vmin;
-    height: 25vmin;
+    width: 20vmin;
+    height: 30vmin;
     background-image: var(--color-glass);
     clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
     opacity: .8;
