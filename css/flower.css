@@ -53,7 +53,7 @@ body{
         z-index: 11111;
     }
     .button-wrapper{
-        display: block;
+        display: block !important;
     }
   }
   
@@ -398,7 +398,6 @@ body{
     transition: 0.3s;
     z-index: 10000;
 }
-  
   .button:hover {
     background-color: #ff9494;
     color: #ffe3e1;
