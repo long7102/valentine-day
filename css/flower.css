@@ -50,12 +50,16 @@ body{
     }
     .button {
         margin-top: 50px;
+        width: 100%;
+    }
+    .button-wrapper{
+        display: block;
     }
   }
   
 .flower__glass{
-    width:20vmin;
-    height: 30vmin;
+    width:15vmin;
+    height: 25vmin;
     background-image: var(--color-glass);
     clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
     opacity: .8;
@@ -385,7 +389,7 @@ body{
     cursor: pointer;
     margin: 10px;
     font-family: "courier";
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background-color: #ffe3e1;
     color: #e67373;
     border-radius: 12px;
@@ -400,4 +404,9 @@ body{
     border: 2px solid #ff9494;
     box-shadow: 1px 1px 2px #ffe3e1;
   }
-  
+  .button-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+  }

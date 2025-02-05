@@ -25,15 +25,15 @@ body {
   border: 2px solid #ffe3e1;
   box-shadow: 1px 1px 2px #ff9494;
   transition: 0.3s;
-  animation: shake 0.2s ease-in-out infinite;
+  animation: shake 1.8s ease-in-out infinite;
 
 }
 @keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-2px); }
-  50% { transform: translateX(2px); }
-  75% { transform: translateX(-2px); }
-  100% { transform: translateX(2px); }
+  0% { transform: translateY(4px); }
+  25% { transform: translateY(-4px); }
+  50% { transform: translateY(4px); }
+  75% { transform: translateY(-4px); }
+  100% { transform: translateY(4px); } /* Về vị trí gốc để tránh khựng */
 }
 .button:hover {
   background-color: #ff9494;
